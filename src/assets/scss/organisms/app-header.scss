@@ -1,0 +1,26 @@
+.app-header {
+  background-color: $red;
+  padding: rem(10px 0);
+  width: 100%;
+  box-shadow: rem(0 4px 8px rgba(0, 0, 0, 0.1));
+
+  @include above('xl') {
+    padding-bottom: rem(15px);
+    padding-top: rem(15px);
+  }
+
+  &__logo {
+    align-self: flex-start;
+    cursor: pointer;
+    display: block;
+    width: rem(100px);
+
+    @include above('l') {
+      width: rem(120px);
+    }
+
+    @include above('xl') {
+      width: rem(160px);
+    }
+  }
+}

@@ -7140,6 +7140,11 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
+rupture-sass@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/rupture-sass/-/rupture-sass-0.3.0.tgz#e981e65b2f36a3cf4ebc3e236635249c903c0dca"
+  integrity sha512-yw7OLwfuDLiDrlxmh/xcKNQtVPPLtRgImNWg8yTp/hO8ofcwNl7iRoI0R7/fE0aaUeBAiuiaUk1J3k5nmbdqhg==
+
 rxjs@^6.5.3:
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
@@ -7189,6 +7194,11 @@ sass-loader@^8.0.2:
     neo-async "^2.6.1"
     schema-utils "^2.6.1"
     semver "^6.3.0"
+
+sass-rem@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/sass-rem/-/sass-rem-2.0.1.tgz#dd863ec9ca5e0597eae5dd239f1f00a6c0f729b0"
+  integrity sha512-Fuf7i1Wr7n1lIdCiImhCJ1/S0jEYq1OmrlqyKuJKSU2B2kHbU09HJIo5AuADvbf3DJLlRxU7b8Jm8D6m5lfqmA==
 
 sax@~1.2.4:
   version "1.2.4"

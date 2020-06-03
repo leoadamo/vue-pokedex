@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link :to="{ name: 'Home' }">Home</router-link>
-      |
-      <router-link :to="{ name: 'PokeDetail' }">
-        About
-      </router-link>
+    <AppHeader />
+    <div class="container">
+      <p>Content Goes Here...</p>
     </div>
-    <router-view />
+    <AppFooter />
   </div>
 </template>
 
 <script>
+import AppHeader from '@/components/layout/AppHeader';
+import AppFooter from '@/components/layout/AppFooter';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    AppHeader,
+    AppFooter
+  }
 };
 </script>

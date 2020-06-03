@@ -1,0 +1,24 @@
+body {
+  background-color: $white;
+  font-family: 'Roboto Regular';
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1300px;
+  margin: auto;
+  width: calc(100% - 20px);
+
+  @include above('m') {
+    width: 90%;
+  }
+}
