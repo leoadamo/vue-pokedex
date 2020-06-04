@@ -3,10 +3,15 @@
   padding: rem(10px 0);
   width: 100%;
   box-shadow: rem(0 4px 8px rgba(0, 0, 0, 0.1));
+  position: relative;
 
   @include above('xl') {
     padding-bottom: rem(15px);
     padding-top: rem(15px);
+  }
+
+  .container {
+    position: relative;
   }
 
   &__logo {
@@ -21,6 +26,97 @@
 
     @include above('xl') {
       width: rem(160px);
+    }
+  }
+
+  .app-nav {
+    width: 100vw;
+    height: 100vh;
+    background-color: $dark-grey;
+    position: absolute;
+    left: rem(-10px);
+    top: rem(-10px);
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+
+    @include above('xl') {
+      top: rem(-15px);
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    &__list {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__item {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__hamburguer {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    position: absolute;
+    right: 0;
+    width: rem(40px);
+    height: rem(40px);
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+
+    span {
+      background-color: $white;
+      display: block;
+      width: 80%;
+      height: rem(2px);
+      border-radius: rem(2px);
+      position: relative;
+      transition: all 0.3s ease;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        background-color: $white;
+        width: 100%;
+        height: rem(2px);
+        border-radius: rem(2px);
+        position: absolute;
+        transition: all 0.3s ease;
+      }
+
+      &::before {
+        top: rem(-8px);
+      }
+
+      &::after {
+        top: rem(8px);
+      }
+    }
+
+    span.is-active {
+      transform: rotate(-45deg);
+
+      &::before {
+        top: 0;
+        transform: rotate(-90deg);
+      }
+
+      &::after {
+        opacity: 0;
+      }
     }
   }
 }

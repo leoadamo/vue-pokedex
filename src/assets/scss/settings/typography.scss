@@ -1,0 +1,9 @@
+.link {
+  font-size: rem(18px);
+  letter-spacing: rem(1px);
+
+  &--tp1 {
+    font-family: 'Roboto Bold';
+    color: $white;
+  }
+}
