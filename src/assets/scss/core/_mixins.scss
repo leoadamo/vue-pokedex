@@ -1,0 +1,16 @@
+// Generating classes based on pallete's colors
+@mixin generateColorsClasses($colors) {
+  @each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color;
+    }
+
+    .color-#{$name} {
+      color: $color;
+    }
+
+    .border-#{$name} {
+      border-color: $color;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// Website Pallete
+$primary-color: #1c1c1c;
+$secondary-color: #2b2d42;
+$tertiary-color: #ef233c;
+$quaternary-color: #edf2f4;
+
+// Mapping colors
+$site-colors: (
+  'eerie-black': $primary-color,
+  'space-cadet': $secondary-color,
+  'imperial-red': $tertiary-color,
+  'alice-blue': $quaternary-color
+);
+
+@include generateColorsClasses($site-colors);

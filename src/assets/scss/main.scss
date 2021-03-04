@@ -3,12 +3,13 @@
 @import '~rupture-sass/rupture';
 
 /* SETTINGS */
-@import './settings/reset';
-@import './settings/colors';
-@import './settings/fonts';
-@import './settings/typography';
-@import './settings/layout';
+@import './core/reset';
+@import './core/mixins';
+@import './core/colors';
+@import './core/fonts';
+@import './core/typo';
+@import './core/layout';
 
-/* ORGANISMS */
-@import './organisms/app-header';
-@import './organisms/app-footer';
+/* TEMPLATES */
+@import './templates/t-app-header';
+@import './templates/t-app-footer';
