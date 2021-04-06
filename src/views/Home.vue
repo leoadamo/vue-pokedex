@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <h1>home</h1>
+    <router-link
+      :to="{ name: 'PokeDetail', params: { id: 6 } }"
+      title="Go to the Pokemon detail"
+    >
+      Go to the Poke Details
+    </router-link>
   </div>
 </template>
 

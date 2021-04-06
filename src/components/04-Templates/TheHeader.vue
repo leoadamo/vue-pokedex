@@ -1,10 +1,10 @@
 <template>
-  <header class="t-app-header">
+  <header class="t-the-header">
     <div class="container">
       <router-link
         :to="{ name: 'Home' }"
         title="Vue Pokédex"
-        class="t-app-header__logo"
+        class="t-the-header__logo"
       >
         <img
           src="@/assets/images/poke-logo.svg"
@@ -42,7 +42,7 @@
       </nav>
 
       <button
-        class="t-app-header__hamburguer"
+        class="t-the-header__hamburguer"
         title="Menu Hamburguer Toggler"
         @click="toggleMenu"
       >
@@ -56,7 +56,7 @@
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
-  name: 'AppHeader',
+  name: 'TheHeader',
   methods: {
     ...mapActions(['toggleMenu'])
   },

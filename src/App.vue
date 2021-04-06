@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <the-header />
     <div class="container">
-      <p>Content Goes Here...</p>
+      <router-view />
     </div>
-    <AppFooter />
+    <the-footer />
   </div>
 </template>
 
 <script>
-import AppHeader from '@/components/templates/AppHeader';
-import AppFooter from '@/components/templates/AppFooter';
+import TheHeader from '@/components/04-Templates/TheHeader';
+import TheFooter from '@/components/04-Templates/TheFooter';
 
 export default {
   name: 'App',
   components: {
-    AppHeader,
-    AppFooter
+    TheHeader,
+    TheFooter
   }
 };
 </script>

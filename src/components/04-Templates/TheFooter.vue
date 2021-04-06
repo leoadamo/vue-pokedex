@@ -1,5 +1,5 @@
 <template>
-  <footer class="t-app-footer">
+  <footer class="t-the-footer">
     <div class="container">
       <p>
         &copy; Vue-Pokédex 2020 | Leonardo Adamoli - Alguns
@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'AppFooter'
+  name: 'TheFooter'
 };
 </script>

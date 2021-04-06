@@ -1,11 +1,11 @@
 <template>
   <div class="about">
-    <h1>Poke</h1>
+    <h1>Poke {{ $route.params.id }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About'
+  name: 'PokeDetail'
 };
 </script>

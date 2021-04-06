@@ -4,19 +4,22 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 function lazyLoad(view) {
-  return () => import(`@/views/${view}`);
+  return () =>
+    import(
+      /* webpackChunkName: "[request]" */ `@/views/${view}`
+    );
 }
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: lazyLoad('Home')
+    component: lazyLoad('home')
   },
   {
-    path: '/poke-detail',
+    path: '/poke/:id',
     name: 'PokeDetail',
-    component: lazyLoad('PokeDetail')
+    component: lazyLoad('poke/_id')
   }
 ];
 
