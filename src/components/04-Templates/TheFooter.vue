@@ -1,6 +1,6 @@
 <template>
   <footer class="t-the-footer">
-    <div class="container">
+    <div class="l-container">
       <p>
         &copy; Vue-Pokédex 2020 | Leonardo Adamoli - Alguns
         Direitos Reservados

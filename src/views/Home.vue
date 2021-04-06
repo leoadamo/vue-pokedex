@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="t-home">
     <router-link
       :to="{ name: 'PokeDetail', params: { id: 6 } }"
       title="Go to the Pokemon detail"
