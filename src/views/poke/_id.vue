@@ -1,5 +1,5 @@
 <template>
-  <div class="t-slug">
+  <div class="container t-slug">
     <h1>Poke {{ $route.params.id }}</h1>
   </div>
 </template>

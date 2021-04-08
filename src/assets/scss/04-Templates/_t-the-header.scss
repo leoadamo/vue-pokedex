@@ -1,16 +1,15 @@
 .t-the-header {
+  position: relative;
   background-color: $tertiary-color;
   padding: rem(10px 0);
-  width: 100%;
   box-shadow: rem(0 4px 8px rgba(0, 0, 0, 0.1));
-  position: relative;
 
   @include above('xl') {
     padding-bottom: rem(15px);
     padding-top: rem(15px);
   }
 
-  .l-container {
+  .container {
     position: relative;
   }
 
@@ -67,13 +66,16 @@
     justify-content: center;
     outline: none;
     position: absolute;
+    top: 50%;
     right: 0;
+    transform: translateY(-50%);
     width: rem(40px);
     height: rem(40px);
     margin: 0;
     padding: 0;
     cursor: pointer;
     background-color: transparent;
+    z-index: 10;
 
     span {
       background-color: $quaternary-color;

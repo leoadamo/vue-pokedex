@@ -1,19 +1,37 @@
 <template>
   <header class="t-the-header">
-    <div class="l-container">
-      <!-- Poké Logo -->
-      <router-link
-        :to="{ name: 'Home' }"
-        title="Vue Pokédex"
-        class="t-the-header__logo"
-      >
-        <img
-          src="@/assets/images/poke-logo.svg"
-          title="Pokémon logo"
-          alt="Pokémon brand logo"
-        />
-      </router-link>
-      <!-- End of Poké Logo -->
+    <div class="container">
+      <div class="container__row">
+        <div class="container__col-10 container__col-md-11">
+          <!-- Poké Logo -->
+          <router-link
+            :to="{ name: 'Home' }"
+            title="Vue Pokédex"
+            class="t-the-header__logo"
+          >
+            <img
+              src="@/assets/images/poke-logo.svg"
+              title="Pokémon logo"
+              alt="Pokémon brand logo"
+            />
+          </router-link>
+          <!-- End of Poké Logo -->
+        </div>
+
+        <div class="container__col-2 container__col-md-1">
+          <!-- Hamburger -->
+          <button
+            class="t-the-header__hamburguer"
+            title="Menu Hamburguer Toggler"
+            @click="toggleMenu"
+          >
+            <span
+              :class="{ 'is-active': isMenuOpen }"
+            ></span>
+          </button>
+          <!-- End of Hamburger -->
+        </div>
+      </div>
 
       <!-- Navigation -->
       <nav
@@ -38,16 +56,6 @@
         </ul>
       </nav>
       <!-- End of Navigation -->
-
-      <!-- Hamburger -->
-      <button
-        class="t-the-header__hamburguer"
-        title="Menu Hamburguer Toggler"
-        @click="toggleMenu"
-      >
-        <span :class="{ 'is-active': isMenuOpen }"></span>
-      </button>
-      <!-- End of Hamburger -->
     </div>
   </header>
 </template>

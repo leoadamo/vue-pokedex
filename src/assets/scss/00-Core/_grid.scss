@@ -1,0 +1,23 @@
+.container {
+  max-width: $grid__bp-lg * 1px;
+  margin: 0 auto;
+
+  &--fluid {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @each $modifier, $breakpoint in $map-grid-props {
+    @include create-col-classes(
+      $modifier,
+      $grid__cols,
+      $breakpoint
+    );
+  }
+}

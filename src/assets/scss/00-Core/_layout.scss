@@ -8,18 +8,8 @@ body {
   flex-direction: column;
   min-height: 100%;
   overflow-x: hidden;
-}
 
-.l-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1300px;
-  margin: auto;
-  width: calc(100% - 20px);
-
-  @include above('m') {
-    width: 90%;
+  > .container--fluid {
+    flex: 1;
   }
 }

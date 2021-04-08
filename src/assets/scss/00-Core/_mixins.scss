@@ -1,3 +1,37 @@
+// Generating Media Queries
+@mixin create-mq($breakpoint, $min-or-max) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (#{$min-or-max}-width: $breakpoint * 1px) {
+      @content;
+    }
+  }
+}
+
+// Creating columns classes
+@mixin create-col-classes(
+  $modifier,
+  $grid-cols,
+  $breakpoint
+) {
+  @include create-mq($breakpoint, 'min') {
+    &__col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+
+    @for $i from 1 through $grid-cols {
+      &__col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i)) * 1%;
+      }
+
+      &__col#{$modifier}-offset-#{$i} {
+        margin-left: (100 / ($grid-cols / $i)) * 1%;
+      }
+    }
+  }
+}
+
 // Generating classes based on pallete's colors
 @mixin generateColorsClasses($colors) {
   @each $name, $color in $colors {
@@ -11,6 +45,50 @@
 
     .border-#{$name} {
       border-color: $color;
+    }
+  }
+}
+
+// Visibility helper
+@each $modifier, $breakpoint in $map-grid-props {
+  @if ($modifier == '') {
+    $modifier: '-xs';
+  }
+
+  @include create-mq($breakpoint - 1, 'max') {
+    .hidden#{$modifier}-down {
+      display: none !important;
+    }
+  }
+
+  @include create-mq($breakpoint, 'min') {
+    .hidden#{$modifier}-up {
+      display: none !important;
+    }
+  }
+}
+
+// Text alignment helper
+@mixin create-alignment-helpers() {
+  $values: center justify left right;
+
+  @each $value in $values {
+    .has-text-#{$value} {
+      text-align: #{$value} !important;
+    }
+  }
+
+  @each $modifier, $breakpoint in $map-grid-props {
+    @if ($modifier == '') {
+      $modifier: '-xs';
+    }
+
+    @include create-mq($breakpoint, 'min') {
+      @each $value in $values {
+        .has-text-#{$value}#{$modifier} {
+          text-align: #{$value} !important;
+        }
+      }
     }
   }
 }

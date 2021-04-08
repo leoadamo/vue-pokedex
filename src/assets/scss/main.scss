@@ -4,8 +4,10 @@
 
 /* SETTINGS */
 @import './00-Core/reset';
+@import './00-Core/variables';
 @import './00-Core/mixins';
-@import './00-Core/colors';
+@import './00-Core/grid';
+@import './00-Core/utilities';
 @import './00-Core/fonts';
 @import './00-Core/typo';
 @import './00-Core/layout';

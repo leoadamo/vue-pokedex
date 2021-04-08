@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <the-header />
-    <div class="l-container">
+    <div class="container container--fluid">
       <router-view />
     </div>
     <the-footer />
